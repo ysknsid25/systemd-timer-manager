@@ -15,6 +15,6 @@ export default [
     jsx: false,
   }),
   {
-    ignores: ['dist', 'coverage', '.git', 'node_modules'],
+    ignores: ['dist', 'coverage', '.git', 'node_modules', 'test'],
   },
 ];

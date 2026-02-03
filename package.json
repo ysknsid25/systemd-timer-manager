@@ -23,7 +23,7 @@
   "main": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "bin": {
-    "systemd-timer-manager": "./dist/index.mjs"
+    "stm": "./dist/index.mjs"
   },
   "files": [
     "dist"

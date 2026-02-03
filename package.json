@@ -1,0 +1,46 @@
+{
+  "name": "systemd-timer-manager",
+  "version": "1.0.0",
+  "description": "Manage systemd timer configuration by JSON",
+  "keywords": [
+    "citty",
+    "CLI",
+    "systemd",
+    "timer",
+    "JSON"
+  ],
+  "homepage": "https://github.com/ysknsid25/systemd-timer-manager#readme",
+  "bugs": {
+    "url": "https://github.com/ysknsid25/systemd-timer-manager/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ysknsid25/systemd-timer-manager.git"
+  },
+  "license": "MIT",
+  "author": "Kanon",
+  "type": "module",
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "systemd-timer-manager": "./dist/index.mjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "jiti src/index.ts",
+    "start": "node dist/index.mjs",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "jiti": "^2.4.2",
+    "typescript": "^5.7.3",
+    "unbuild": "^3.3.1"
+  },
+  "dependencies": {
+    "citty": "^0.1.6"
+  }
+}

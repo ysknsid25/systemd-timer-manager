@@ -41,6 +41,7 @@
     "unbuild": "^3.3.1"
   },
   "dependencies": {
-    "citty": "^0.1.6"
+    "citty": "^0.1.6",
+    "zod": "^4.3.6"
   }
 }

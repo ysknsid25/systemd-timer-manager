@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    container_name: systemd-timer-manager
+    volumes:
+      - .:/app
+      - /sys/fs/cgroup:/sys/fs/cgroup:rw
+    # Required for systemd
+    privileged: true
+    cgroup: host
+    stop_signal: SIGRTMIN+3
+    tmpfs:
+      - /run
+      - /run/lock

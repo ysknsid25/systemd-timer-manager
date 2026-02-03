@@ -51,4 +51,44 @@ node ./dist/index.mjs --help
 - `npm run dev`: Run the CLI from source.
 - `npm run build`: Build the project (bundle and generate types).
 - `npm run start`: Run the built CLI.
-- `npm run test`: Run tests (using vitest).
+
+## Docker Environment (Systemd Verification)
+
+Since systemd requires a specific environment to run, you can use the provided Docker setup to verify systemd timer functionality.
+
+### Prerequisites
+- Docker
+- Docker Compose
+
+### Setup
+
+1. Start the container:
+   ```bash
+   docker compose up -d
+   ```
+
+2. Enter the container:
+   ```bash
+   docker compose exec app bash
+   ```
+
+3. Inside the container, you can run the CLI:
+   ```bash
+   # Build inside the container (if needed)
+   npm install
+   npm run build
+
+   # Run the CLI
+   ./dist/index.mjs --help
+   ```
+
+4. Verify systemd is running:
+   ```bash
+   systemctl status
+   ```
+
+### Cleanup
+
+```bash
+docker compose down
+```
